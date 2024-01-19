@@ -14,6 +14,7 @@ require (
 	github.com/genuinetools/reg v0.16.0
 	github.com/gin-gonic/gin v1.4.0
 	github.com/gizak/termui/v3 v3.1.0
+	github.com/go-openapi/swag v0.0.0-20160704191624-1d0bd113de87 // indirect
 	github.com/google/gofuzz v1.0.0 // indirect
 	github.com/googleapis/gnostic v0.3.1 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20190328170749-bb2674552d8f // indirect

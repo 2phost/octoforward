@@ -1,7 +1,7 @@
 apiVersion: krew.googlecontainertools.github.com/v1alpha2
 kind: Plugin
 metadata:
-  name: {{ .PluginName }}
+  name: octoforward
 spec:
   version: "v0.1.0"
   platforms:
@@ -9,47 +9,47 @@ spec:
       matchLabels:
         os: linux
         arch: amd64
-    uri: https://github.com/{{ .Owner }}/{{ .Repo }}/releases/download/v0.1.0/{{ .PluginName }}_linux_amd64.tar.gz
+    uri: https://github.com/2phost/octoforward/releases/download/v0.1.0/octoforward_linux_amd64.tar.gz
     sha256: ""
     files:
-    - from: "./{{ .PluginName }}"
+    - from: "./octoforward"
       to: "."
     - from: LICENSE
       to: "."
-    bin: "{{ .PluginName }}"
+    bin: "octoforward"
   - selector:
       matchLabels:
         os: darwin
         arch: amd64
-    uri: https://github.com/{{ .Owner }}/{{ .Repo }}/releases/download/v0.1.0/{{ .PluginName }}_darwin_amd64.tar.gz
+    uri: https://github.com/2phost/octoforward/releases/download/v0.1.0/octoforward_darwin_amd64.tar.gz
     sha256: ""
     files:
-    - from: "./{{ .PluginName }}"
+    - from: "./octoforward"
       to: "."
     - from: LICENSE
       to: "."
-    bin: "{{ .PluginName }}"
+    bin: "octoforward"
   - selector:
       matchLabels:
         os: windows
         arch: amd64
-    uri: https://github.com/{{ .Owner }}/{{ .Repo }}/releases/download/v0.1.0/{{ .PluginName }}_windows_amd64.zip
+    uri: https://github.com/2phost/octoforward/releases/download/v0.1.0/octoforward_windows_amd64.zip
     sha256: ""
     files:
-    - from: "/{{ .PluginName }}.exe"
+    - from: "/octoforward.exe"
       to: "."
     - from: LICENSE
       to: "."
-    bin: "{{ .PluginName }}.exe"
+    bin: "octoforward.exe"
   shortDescription: A new plugin
-  homepage: https://github.com/{{ .Owner }}/{{ .Repo }}
+  homepage: https://github.com/2phost/octoforward
   caveats: |
     Usage:
-      $ kubectl {{ .PluginName }}
+      $ kubectl octoforward
 
     For additional options:
-      $ kubectl {{ .PluginName }} --help
-      or https://github.com/{{ .Owner }}/{{ .Repo }}/blob/v0.1.0/doc/USAGE.md
+      $ kubectl octoforward --help
+      or https://github.com/2phost/octoforward/blob/v0.1.0/doc/USAGE.md
 
   description: |
     This is a new plugin

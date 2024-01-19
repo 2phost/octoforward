@@ -1,10 +1,10 @@
-project_name: {{ .PluginName }}
+project_name: octoforward
 release:
   github:
-    owner: {{ .Owner }}
-    name: {{ .Repo }}
+    owner: 2phost
+    name: octoforward
 builds:
-  - id: {{ .PluginName }}
+  - id: octoforward
     goos:
     - linux
     - windows
@@ -17,12 +17,12 @@ builds:
       - GO111MODULE=on
     main: cmd/plugin/main.go
     ldflags: -s -w
-      -X github.com/{{ .Owner }}/{{ .Repo }}/pkg/version.version=
+      -X github.com/2phost/octoforward/pkg/version.version=
 archives:
-  - id: {{ .PluginName }}
+  - id: octoforward
     builds:
-    - {{ .PluginName }}
-    name_template: {{ `"{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"` }}
+    - octoforward
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
     format_overrides:
     - goos: windows
       format: zip
